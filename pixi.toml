@@ -1,0 +1,15 @@
+[workspace]
+channels = ["conda-forge", "bioconda"]
+name = "llm-experiment"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+jupyterlab = ">=4.5.0,<5"
+httpx = ">=0.28.1,<0.29"
+pydantic = ">=2.12.5,<3"
+duckdb = ">=1.4.3,<2"
+dvc = ">=3.64.2,<4"
+snakemake = ">=9.14.5,<10"
