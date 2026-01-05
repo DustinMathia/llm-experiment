@@ -3,6 +3,9 @@
 !.pixi/config.toml
 .env
 
+**/.ipynb_checkpoints/
+**/.jupyter_ystore.db
+
 .snakemake
 
 envs/.snakemake_envs/
