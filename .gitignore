@@ -2,3 +2,8 @@
 .pixi/*
 !.pixi/config.toml
 .env
+
+#data
+data/
+*.xlsx
+*.duckdb
