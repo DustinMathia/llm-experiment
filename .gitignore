@@ -7,3 +7,4 @@
 data/
 *.xlsx
 *.duckdb
+!data/raw/example_variant_data.xlsx
