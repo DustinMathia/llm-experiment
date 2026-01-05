@@ -3,8 +3,26 @@
 !.pixi/config.toml
 .env
 
+.snakemake
+
+envs/.snakemake_envs/
+
+# Common intermediate and data file extensions to ignore
+# Adjust as necessary for your specific workflow
+*.bai
+*.bam
+*.vcf
+*.log
+*.err
+*.out
+*.tmp
+*.temp
+
 #data
 *.xlsx
 *.duckdb
 
 !/data/raw/example_variant_data.xlsx
+
+results/*
+!results/.gitkeep
