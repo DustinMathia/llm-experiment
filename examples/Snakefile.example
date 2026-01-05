@@ -1,0 +1,28 @@
+# --- Configuration Section ---
+# Define a list of sample names we expect to find in the inputs directory
+SAMPLES = ["A", "B"]
+
+# --- Rules Section ---
+
+# Rule 1: The default target rule ("all")
+# When you run snakemake, this rule is executed first.
+# It defines the final list of files we want to produce.
+rule all:
+    input:
+        # The expand function dynamically creates file paths:
+        # outputs/A.processed.txt
+        # outputs/B.processed.txt
+        expand("outputs/{sample}.processed.txt", sample=SAMPLES)
+
+# Rule 2: The processing step
+# This rule processes a single input file to create a single output file.
+rule process_data:
+    # Wildcard {sample} will be filled with "A", "B", and "C" by Snakemake.
+    input:
+        "inputs/{sample}.txt"
+    output:
+        "outputs/{sample}.processed.txt"
+    # The shell command uses the defined input and output placeholders
+    shell:
+        "cat {input} | sort -n > {output}"
+        # (Assuming 'sort' is your processing command here)
