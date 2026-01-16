@@ -69,6 +69,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/connection_pool-0.0.3-pyhd3deb0d_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/cpython-3.13.11-py313hd8ed1ab_100.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cryptography-46.0.3-py313heb322e3_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-version-13.1-h2ff5cdb_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/dbus-1.16.2-h24cb091_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/debugpy-1.8.18-py313h5d5ffb9_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/decorator-5.2.1-pyhd8ed1ab_0.conda
@@ -226,6 +227,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/networkx-3.6.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/numpy-2.4.0-py313hf6604e3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/ollama-0.14.1-cuda_130h9684303_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/ollama-python-0.6.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/omegaconf-2.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/openai-2.14.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda
@@ -1142,6 +1145,15 @@ packages:
   license_family: BSD
   size: 1723198
   timestamp: 1764805305302
+- conda: https://conda.anaconda.org/conda-forge/noarch/cuda-version-13.1-h2ff5cdb_3.conda
+  sha256: 176ac20fdb95611af8fb2bf0d3d16fee998019b1d0f12fc9ddd5fa0df4553992
+  md5: d85448460c25ee43ff2f8346bb9ad52b
+  constrains:
+  - cudatoolkit 13.1|13.1.*
+  - __cuda >=13
+  license: LicenseRef-NVIDIA-End-User-License-Agreement
+  size: 21511
+  timestamp: 1757017115788
 - conda: https://conda.anaconda.org/conda-forge/linux-64/dbus-1.16.2-h24cb091_1.conda
   sha256: 8bb557af1b2b7983cf56292336a1a1853f26555d9c6cecf1e5b2b96838c9da87
   md5: ce96f2f470d39bd96ce03945af92e280
@@ -3101,6 +3113,30 @@ packages:
   license: BSD-3-Clause
   size: 8848921
   timestamp: 1766373934675
+- conda: https://conda.anaconda.org/conda-forge/linux-64/ollama-0.14.1-cuda_130h9684303_0.conda
+  sha256: 12ce4671c210cf3b7e861bc07fd34cd42f0bd2f2004132468504323da4e2ab8a
+  md5: 529e4837fc98b7f6805fd7f498c12151
+  depends:
+  - cuda-version >=13.0,<14
+  - __glibc >=2.17
+  - libstdcxx >=14
+  - libgcc >=14
+  - __glibc >=2.28,<3.0.a0
+  license: MIT
+  license_family: MIT
+  size: 541337462
+  timestamp: 1768431672337
+- conda: https://conda.anaconda.org/conda-forge/noarch/ollama-python-0.6.1-pyhd8ed1ab_0.conda
+  sha256: 9378774c65535d2ca9f517ff06be0f2cc8c2168f7bab617d46cb38a1b70895e2
+  md5: 173033972b43854b02e17a6728346fe5
+  depends:
+  - httpx >=0.27
+  - pydantic >=2.9.0
+  - python >=3.9
+  license: MIT
+  license_family: MIT
+  size: 19545
+  timestamp: 1763082505008
 - conda: https://conda.anaconda.org/conda-forge/noarch/omegaconf-2.3.0-pyhd8ed1ab_0.conda
   sha256: df806841be847e5287b22b6ae7f380874f81ea51f1b51ae14a570f3385c7b133
   md5: 23cc056834cab53849b91f78d6ee3ea0
