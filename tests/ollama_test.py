@@ -23,7 +23,7 @@ columns_to_use = [
 
 # load only the specified columns
 df = pd.read_csv(DATA_PATH, usecols=columns_to_use)
-df = df.iloc[[5]] # 6th row only for testing
+df = df.iloc[[0]]
 
 outputs = []
 
